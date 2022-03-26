@@ -28,6 +28,7 @@
         app:itemIconTint="@color/bottom_navigation_icon_color"
         app:menu="@menu/bottom_navigation_menu"
         app:labelVisibilityMode="unlabeled"
+        app:itemIconSize="28dp"
         app:itemRippleColor="@color/bottomNavRipple"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
