@@ -7,6 +7,7 @@
     tools:context=".ui.fragments.ProfileFragment">
 
     <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         style="@style/toolbar"
         app:contentInsetStart="0dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -28,13 +29,91 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.appcompat.widget.Toolbar>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Profile fragment"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/avatar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/avatar"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintHorizontal_weight="2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintEnd_toStartOf="@id/editBtn"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+    <TextView
+        android:id="@+id/postsNumber"
+        android:text="5"
+        android:layout_marginTop="15dp"
+        style="@style/stats_number"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintEnd_toEndOf="@id/postsLabel"
+        app:layout_constraintStart_toStartOf="@id/postsLabel"
+        app:layout_constraintBottom_toTopOf="@id/editBtn"
+        app:layout_constraintVertical_bias="0.2"
+
+        />
+
+    <TextView
+        android:id="@+id/postsLabel"
+        android:text="posts"
+
+        style="@style/stats_label"
+        app:layout_constraintStart_toStartOf="@id/editBtn"
+        app:layout_constraintTop_toBottomOf="@id/postsNumber"
+        app:layout_constraintEnd_toStartOf="@id/followersLabel" />
+
+    <TextView
+        android:id="@+id/followersNumber"
+        android:text="100"
+        style="@style/stats_number"
+        app:layout_constraintStart_toStartOf="@id/followersLabel"
+        app:layout_constraintEnd_toEndOf="@id/followersLabel"
+        app:layout_constraintBaseline_toBaselineOf="@id/postsNumber" />
+
+    <TextView
+        android:id="@+id/followersLabel"
+        android:text="followers"
+        style="@style/stats_label"
+        app:layout_constraintStart_toEndOf="@id/postsLabel"
+        app:layout_constraintEnd_toStartOf="@id/followingLabel"
+        app:layout_constraintBaseline_toBaselineOf="@id/postsLabel"/>
+
+    <TextView
+        android:id="@+id/followingNumber"
+        android:text="50"
+        style="@style/stats_number"
+        app:layout_constraintStart_toStartOf="@id/followingLabel"
+        app:layout_constraintEnd_toEndOf="@id/followingLabel"
+        app:layout_constraintBaseline_toBaselineOf="@id/postsNumber"/>
+
+    <TextView
+        android:id="@+id/followingLabel"
+        android:text="following"
+        style="@style/stats_label"
+        app:layout_constraintStart_toEndOf="@id/followersLabel"
+        app:layout_constraintEnd_toEndOf="@id/editBtn"
+        app:layout_constraintBaseline_toBaselineOf="@id/postsLabel"/>
+
+    <Button
+        android:id="@+id/editBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:minHeight="0dp"
+        android:background="@drawable/edit_profile_button_bg"
+        android:elevation="4dp"
+        android:textAlignment="center"
+        android:layout_marginHorizontal="20dp"
+        android:padding="4dp"
+        android:letterSpacing="0.05"
+        android:text="Edit Profile"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@id/avatar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="5"
+        app:layout_constraintStart_toEndOf="@id/avatar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
