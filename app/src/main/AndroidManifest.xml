@@ -10,6 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.InstagramClone">
         <activity
+            android:windowSoftInputMode="adjustResize"
             android:name=".ui.activities.AuthenticationActivity"
             android:exported="true">
             <intent-filter>

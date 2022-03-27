@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.instagramclone.R
 import com.example.instagramclone.databinding.FragmentAuthMainBinding
+import com.example.instagramclone.utils.FragmentManager
 
 
 class AuthMainFragment : Fragment() {
@@ -25,6 +26,12 @@ class AuthMainFragment : Fragment() {
     ): View? {
         binding = FragmentAuthMainBinding.inflate(layoutInflater)
 
+        binding.loginBtn.setOnClickListener {
+        }
+
+        binding.registerBtn.setOnClickListener {
+            FragmentManager.openFragment(AuthEmailFragment(), true)
+        }
         return binding.root
     }
 

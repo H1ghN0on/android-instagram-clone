@@ -16,6 +16,7 @@ import com.example.instagramclone.ui.fragments.HomeFragment
 import com.example.instagramclone.ui.fragments.LikesFragment
 import com.example.instagramclone.ui.fragments.ProfileFragment
 import com.example.instagramclone.ui.fragments.SearchFragment
+import com.example.instagramclone.utils.FragmentManager
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 
@@ -29,8 +30,7 @@ class MainActivity : AppCompatActivity() {
 
         binding = ActivityMainBinding.inflate(layoutInflater);
         setContentView(binding.root)
-
-
+        initFragmentManager()
         val navHostFragment = supportFragmentManager.findFragmentById(
             R.id.hostFragment
         ) as NavHostFragment
@@ -42,6 +42,13 @@ class MainActivity : AppCompatActivity() {
             true
         }
 
+
+
+    }
+
+    private fun initFragmentManager() {
+        FragmentManager.setCurrentActivity(this)
+        FragmentManager.setCurrentHostFragmentView(binding.hostFragment)
     }
 
 }
