@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.instagramclone.R
 import com.example.instagramclone.databinding.FragmentAuthEmailBinding
+import com.example.instagramclone.utils.FragmentManager
 
 class AuthEmailFragment : Fragment() {
 
@@ -37,6 +38,10 @@ class AuthEmailFragment : Fragment() {
             override fun afterTextChanged(s: Editable) {
             }
         })
+
+        binding.registerBtn.setOnClickListener {
+            FragmentManager.openFragment(AuthRegistrationProfileFragment(), true)
+        }
 
         return binding.root
     }

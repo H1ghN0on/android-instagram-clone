@@ -42,8 +42,6 @@ class MainActivity : AppCompatActivity() {
             true
         }
 
-
-
     }
 
     private fun initFragmentManager() {

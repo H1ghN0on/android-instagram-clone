@@ -4,7 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.fragments.AuthMainFragment">
+    tools:context=".ui.fragments.AuthMainFragment"
+    android:paddingHorizontal="20dp"
+    >
 
     <ImageView
         android:id="@+id/logo"
@@ -19,9 +21,7 @@
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/registerBtn"
         style="@style/auth_main_btn"
-        android:background="@drawable/register_button_bg"
         android:text="Create new account"
-        android:textColor="@color/register_button_text_color"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
