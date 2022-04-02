@@ -7,14 +7,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.instagramclone.R
-import com.example.instagramclone.databinding.FragmentAuthRegistrationProfileBinding
+import com.example.instagramclone.databinding.FragmentAuthConfirmationCodeBinding
+import com.example.instagramclone.utils.FragmentManager
 
 
-class AuthRegistrationProfileFragment : Fragment() {
+class AuthConfirmationCodeFragment : Fragment() {
 
     private val TAG = "AuthRegistrationProfileFragment"
-    private lateinit var binding: FragmentAuthRegistrationProfileBinding
+    private lateinit var binding: FragmentAuthConfirmationCodeBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,7 +24,7 @@ class AuthRegistrationProfileFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentAuthRegistrationProfileBinding.inflate(layoutInflater)
+        binding = FragmentAuthConfirmationCodeBinding.inflate(layoutInflater)
         binding.input.addTextChangedListener(object: TextWatcher {
             override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
 
@@ -40,11 +40,16 @@ class AuthRegistrationProfileFragment : Fragment() {
             override fun afterTextChanged(s: Editable) {
             }
         })
+
+        binding.registerBtn.setOnClickListener {
+            FragmentManager.openFragment(AuthBirthdayInputFragment(), true)
+        }
+
         return binding.root
     }
 
     companion object {
 
-        fun newInstance(param1: String, param2: String) = AuthRegistrationProfileFragment()
+        fun newInstance(param1: String, param2: String) = AuthConfirmationCodeFragment()
     }
 }

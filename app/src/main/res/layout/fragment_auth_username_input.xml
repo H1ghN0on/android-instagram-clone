@@ -5,18 +5,33 @@
     android:layout_height="match_parent"
     android:paddingHorizontal="20dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.fragments.AuthEmailFragment">
+    tools:context=".ui.fragments.AuthNameInputFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-   <ImageView
-       android:layout_width="125dp"
-       android:layout_height="125dp"
-       android:src="@drawable/register_avatar"
-       android:layout_marginBottom="25dp"
-       app:layout_constraintStart_toStartOf="parent"
-       app:layout_constraintEnd_toEndOf="parent"
-       app:layout_constraintBottom_toTopOf="@id/inputBox"
-       />
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="15dp"
+        android:text="Choose your username"
+        style="@style/auth_title"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toTopOf="@id/subtitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/subtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/auth_subtitle"
+        android:layout_marginBottom="20dp"
+        android:text="You can always change it later"
+        android:textColor="@color/gray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/inputBox"
+        />
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/inputBox"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -36,11 +51,10 @@
 
         <EditText
             android:id="@+id/input"
+            style="@style/auth_input"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            style="@style/auth_input"
-            android:hint="Email"
-            />
+            android:hint="Username" />
 
     </com.google.android.material.textfield.TextInputLayout>
     <androidx.appcompat.widget.AppCompatButton
@@ -55,24 +69,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/inputBox"
         />
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:gravity="center"
-        app:layout_constraintBottom_toBottomOf="parent">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Already have an account?"
-            android:textSize="13sp"/>
-        <TextView
-            android:layout_marginLeft="5dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Log in"
-            android:textColor="@color/lightblue"
-            android:textSize="13sp"/>
-    </LinearLayout>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

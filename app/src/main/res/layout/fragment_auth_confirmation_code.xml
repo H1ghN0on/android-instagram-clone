@@ -1,22 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingHorizontal="20dp"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.fragments.AuthEmailFragment">
+    tools:context=".ui.fragments.AuthConfirmationCodeFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-   <ImageView
-       android:layout_width="125dp"
-       android:layout_height="125dp"
-       android:src="@drawable/register_avatar"
-       android:layout_marginBottom="25dp"
-       app:layout_constraintStart_toStartOf="parent"
-       app:layout_constraintEnd_toEndOf="parent"
-       app:layout_constraintBottom_toTopOf="@id/inputBox"
-       />
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="15dp"
+        android:text="Enter confirmation code"
+        style="@style/auth_title"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toTopOf="@id/subtitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/subtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/auth_subtitle"
+        android:textColor="@color/gray"
+        android:text="Enter confirmation code that we sent to monkey.d.luffy@yandex.ru"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/sendAgainBtn"
+        />
+    <TextView
+        android:id="@+id/sendAgainBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="Send code again"
+        app:autoSizeStepGranularity="5sp"
+        android:textColor="@color/blue"
+        android:textAlignment="center"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/inputBox"
+        />
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/inputBox"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -39,7 +66,7 @@
             android:layout_width="match_parent"
             android:layout_height="40dp"
             style="@style/auth_input"
-            android:hint="Email"
+            android:hint="Code confirmation"
             />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -48,31 +75,14 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_marginTop="15dp"
-        android:text="Next"
         style="@style/auth_main_btn"
         android:enabled="false"
+        android:text="Next"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/inputBox"
         />
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:gravity="center"
-        app:layout_constraintBottom_toBottomOf="parent">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Already have an account?"
-            android:textSize="13sp"/>
-        <TextView
-            android:layout_marginLeft="5dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Log in"
-            android:textColor="@color/lightblue"
-            android:textSize="13sp"/>
-    </LinearLayout>
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

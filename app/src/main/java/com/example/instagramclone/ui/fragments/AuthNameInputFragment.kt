@@ -7,14 +7,15 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.instagramclone.databinding.FragmentAuthEmailBinding
+import com.example.instagramclone.R
+import com.example.instagramclone.databinding.FragmentAuthNameInputBinding
 import com.example.instagramclone.utils.FragmentManager
 
-class AuthEmailFragment : Fragment() {
 
-    private val TAG = "AuthEmailFragment"
-    private lateinit var binding: FragmentAuthEmailBinding
-    private lateinit var emailInputTextWatcher: TextWatcher
+class AuthNameInputFragment : Fragment() {
+
+    private val TAG = "AuthNameInputFragment"
+    private lateinit var binding: FragmentAuthNameInputBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,7 +25,12 @@ class AuthEmailFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentAuthEmailBinding.inflate(layoutInflater)
+        // Inflate the layout for this fragment
+        binding = FragmentAuthNameInputBinding.inflate(layoutInflater)
+
+        binding.registerBtn.setOnClickListener {
+            FragmentManager.openFragment(AuthPasswordInputFragment(), true)
+        }
 
         binding.input.addTextChangedListener(object: TextWatcher {
             override fun onTextChanged(s:CharSequence, start:Int, before:Int, count:Int) {
@@ -38,17 +44,10 @@ class AuthEmailFragment : Fragment() {
             }
         })
 
-        binding.registerBtn.setOnClickListener {
-            FragmentManager.openFragment(AuthConfirmationCodeFragment(), true)
-        }
-
         return binding.root
     }
 
     companion object {
-        fun newInstance(param1: String, param2: String) =  AuthEmailFragment()
+        fun newInstance(param1: String, param2: String) = AuthNameInputFragment()
     }
-
-
-
 }
