@@ -42,7 +42,7 @@ class AuthConfirmationCodeFragment : Fragment() {
         })
 
         binding.registerBtn.setOnClickListener {
-            FragmentManager.openFragment(AuthBirthdayInputFragment(), true)
+            FragmentManager.openFragment(AuthNameInputFragment(), true)
         }
 
         return binding.root

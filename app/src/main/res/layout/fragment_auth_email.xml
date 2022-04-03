@@ -15,8 +15,31 @@
        android:layout_marginBottom="25dp"
        app:layout_constraintStart_toStartOf="parent"
        app:layout_constraintEnd_toEndOf="parent"
-       app:layout_constraintBottom_toTopOf="@id/inputBox"
+       app:layout_constraintBottom_toTopOf="@id/title"
        />
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="15dp"
+        android:text="Enter your email"
+        style="@style/auth_title"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toTopOf="@id/subtitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+    <TextView
+        android:id="@+id/subtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/auth_subtitle"
+        android:layout_marginBottom="15dp"
+        android:textColor="@color/gray"
+        android:text="Specify only your real email. We will send the code to confirm it."
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/inputBox"
+        />
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/inputBox"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
