@@ -6,6 +6,7 @@
         <entry key="..\:/CodingTemple/InstagramClone/app/src/main/res/drawable-anydpi/ic_home_active.xml" value="0.1" />
         <entry key="..\:/CodingTemple/InstagramClone/app/src/main/res/drawable-anydpi/ic_likes.xml" value="0.157" />
         <entry key="..\:/CodingTemple/InstagramClone/app/src/main/res/drawable-anydpi/ic_likes_active.xml" value="0.1" />
+        <entry key="..\:/CodingTemple/InstagramClone/app/src/main/res/drawable-anydpi/ic_profile.xml" value="0.242" />
         <entry key="..\:/CodingTemple/InstagramClone/app/src/main/res/drawable-anydpi/ic_share_active.xml" value="0.1" />
         <entry key="..\:/CodingTemple/InstagramClone/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.224" />
         <entry key="..\:/CodingTemple/InstagramClone/app/src/main/res/drawable/bottom_navigation_color.xml" value="0.224" />
@@ -23,7 +24,7 @@
         <entry key="..\:/CodingTemple/InstagramClone/app/src/main/res/layout/fragment_auth_confirmation_code.xml" value="0.20863616930312098" />
         <entry key="..\:/CodingTemple/InstagramClone/app/src/main/res/layout/fragment_auth_email.xml" value="0.2" />
         <entry key="..\:/CodingTemple/InstagramClone/app/src/main/res/layout/fragment_auth_main.xml" value="0.264" />
-        <entry key="..\:/CodingTemple/InstagramClone/app/src/main/res/layout/fragment_auth_name_input.xml" value="0.1" />
+        <entry key="..\:/CodingTemple/InstagramClone/app/src/main/res/layout/fragment_auth_name_input.xml" value="0.264" />
         <entry key="..\:/CodingTemple/InstagramClone/app/src/main/res/layout/fragment_auth_password_input.xml" value="0.264" />
         <entry key="..\:/CodingTemple/InstagramClone/app/src/main/res/layout/fragment_auth_registration_profile.xml" value="0.264" />
         <entry key="..\:/CodingTemple/InstagramClone/app/src/main/res/layout/fragment_auth_username_input.xml" value="0.264" />
